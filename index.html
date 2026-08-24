@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chalkboard — daily list</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="board-wrap">
+  <div class="board" id="board">
+    <div class="chalk-dust" aria-hidden="true"></div>
+
+    <header class="board-header">
+      <div class="tray-line" aria-hidden="true"></div>
+      <h1 class="title">today's list</h1>
+      <p class="subtitle" id="dateLabel"></p>
+    </header>
+
+    <form class="add-row" id="addForm" autocomplete="off">
+      <input
+        type="text"
+        id="addInput"
+        name="text"
+        placeholder="write something down…"
+        maxlength="140"
+        required
+      />
+      <button type="submit" class="chalk-btn" aria-label="Add task">+</button>
+    </form>
+
+    <ul class="list" id="list" aria-live="polite"></ul>
+
+    <p class="empty-state" id="emptyState">the board is clean. what's on your mind?</p>
+
+    <footer class="board-footer">
+      <span id="countLabel">0 left</span>
+      <button type="button" id="clearDoneBtn" class="link-btn">erase finished</button>
+    </footer>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
