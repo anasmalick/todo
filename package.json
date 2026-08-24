@@ -1,0 +1,12 @@
+{
+  "name": "chalkboard-todo",
+  "version": "1.0.0",
+  "description": "A small self-hosted to-do list app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

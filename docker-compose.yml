@@ -1,0 +1,13 @@
+services:
+  todo:
+    build: .
+    image: chalkboard-todo:latest
+    container_name: chalkboard-todo
+    ports:
+      - "3000:3000"
+    volumes:
+      - todo-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  todo-data:
